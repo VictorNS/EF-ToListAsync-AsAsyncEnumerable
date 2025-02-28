@@ -35,7 +35,7 @@ public class ExportService
 		}
 
 		await Task.Delay(1000, cancellationToken);
-		metricsCollector.End(count);
+		metricsCollector.End($"count: {count}");
 	}
 
 	public async Task ExportAsAsyncEnumerable(int? count, CancellationToken cancellationToken)
@@ -59,6 +59,6 @@ public class ExportService
 		}
 
 		await Task.Delay(1000, cancellationToken);
-		metricsCollector.End(count);
+		metricsCollector.End($"count: {count}");
 	}
 }
